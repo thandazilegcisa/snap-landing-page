@@ -13,25 +13,44 @@
   gap: 12.5%;
   margin: 2.5rem 0 0 2.5rem;
 
+  @media screen and (min-width: 885px) {
+    .navigation-section {
+      display: flex;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+      right: 25%;
+
+      position: relative;
+      right: 55%;
+    }
+  }
+  @media (min-width: 885px) and (max-width: 1250px) {
+    ul {
+      right: 25%;
+    }
+  }
   .navigation-section {
     ul {
       display: flex;
       flex-direction: row;
-      gap: 1rem;
+      gap: 2rem;
     }
     li {
       list-style: none;
       .company-default-state,
-      .features-default-state{
+      .features-default-state {
         display: none;
 
-        .features-svg{
+        .features-svg {
           margin-right: 1rem;
           margin-left: 1rem;
         }
       }
       .company-active-state,
-      .features-active-state{
+      .features-active-state {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -43,7 +62,7 @@
         box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
       }
       .features-active-arrow,
-      .company-active-arrow{
+      .company-active-arrow {
         display: none;
       }
     }
@@ -51,19 +70,21 @@
       text-decoration: none;
       color: hsl(0, 0%, 41%);
       margin: 0 0.5rem 0 0.5rem;
-      font-family: 'Epilogue', sans-serif;
+      font-family: "Epilogue", sans-serif;
       font-weight: 500;
     }
-    a:active{
+    a:active {
       color: hsl(0, 0%, 8%);
       font-weight: 700;
     }
-    a:hover{
+    a:hover {
       font-weight: 700;
       color: hsl(0, 0%, 8%);
     }
   }
+
   .cta-section {
+    position: inherit;
     ul {
       display: flex;
       flex-direction: row;
@@ -81,78 +102,177 @@
     a {
       text-decoration: none;
       color: hsl(0, 0%, 41%);
-      font-family: 'Epilogue', sans-serif;
+      font-family: "Epilogue", sans-serif;
       font-weight: 500;
 
-      a:active{
+      a:active {
         color: hsl(0, 0%, 8%);
         font-weight: 700;
       }
-      a:hover{
+      a:hover {
         color: hsl(0, 0%, 8%);
         font-weight: 700;
       }
     }
-    
+  }
+
+  button {
+    display: none;
+  }
+
+  @media screen and (max-width: 885px) {
+    .logo-navigation-cta-section {
+      position: absolute;
+    }
+    .navigation-section {
+      position: absolute;
+      top: 1rem;
+      left: 55%;
+      /* border: 1px solid red; */
+      margin-right: none;
+      width: 45vw;
+      height: 115vh;
+      background-color: white;
+      ul {
+        flex-direction: column;
+        flex-basis: content;
+        gap: 2rem;
+        margin-top: 1.5rem;
+      }
+      li {
+        .company-active-state,
+        .features-active-state {
+          position: relative !important;
+          box-shadow: none;
+          background-color: white;
+        }
+      }
+    }
+    .logo-section {
+      position: absolute;
+      right: 75%;
+    }
+    button {
+      display: inline-block;
+      border-color: transparent;
+      background: transparent;
+      position: relative;
+      left: 80%;
+
+      i {
+        font-size: 1.55rem;
+        margin: 1rem;
+      }
+    }
+    .cta-section {
+      position: relative;
+      top: 0%;
+      left: 32%;
+
+      .login-link {
+        text-align: justify;
+        justify-content: center;
+        margin-left: 1.5rem;
+      }
+    }
   }
 }
 
-.landing-grid-container {
-  // Grid Container Class:
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
+@media screen and (max-width: 885px) {
+  .main-container {
+    .images-section {
+      picture {
+        img {
+          width: 100%;
+          height: auto;
 
-  transform: translateX(6.5rem);
-
-  .info-section {
-    margin: 5rem 12rem 0 0.5rem;
-    padding: 5%;
-
-    h1 {
-      font-family: sans-serif;
-      font-size: 5rem;
-
-      span{
-        word-spacing: 5rem;
+          margin-top: 5rem;
+        }
       }
     }
-    p {
-      text-align: justify;
-      justify-content: left;
-      line-height: 2rem;
-      word-spacing: 0.5rem;
-    }
-    a {
-      text-decoration: none;
-      padding: 1rem;
-      border: 1px solid black;
 
-      color: white;
-      background-color: black;
-      border-radius: 0.55rem;
-    }
-  }
-
-  .images-section {
-    .hero-section-image {
-      margin-top: 5rem;
-      width: 55%;
-    }
-  }
-
-  .client-section {
-
-    /* Client Section Container */
-
-    ul{
-
-        list-style: none;
+    .info-section {
+      text-align: center;
+      header {
+        h1 {
+          margin: 2rem;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+      }
+      p {
+        width: 50%;
         display: flex;
-        gap: 5rem;
+        text-align: center;
+        justify-content: center;
 
-        transform: translateY(-95%);
-        margin-left: 2.5rem;
+        position: relative;
+        z-index: -1;
+
+        left: 30%;
+      }
+      .learn-more-button {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 1rem;
+        border-radius: 10%;
+      }
     }
+
+    .clients-section {
+      display: flex;
+      flex-direction: row;
+      gap: 2.5rem;
+
+      margin-top: 4rem;
+    }
+  }
+}
+@media screen and (min-width: 885px) {
+  .main-container {
+    display: flex;
+    flex-direction: row-reverse;
+
+    .images-section {
+      picture {
+        img {
+          margin: 5rem;
+        }
+      }
+    }
+
+    .info-section {
+      margin: 5rem;
+      margin-top: 10rem;
+      text-align: center;
+      header {
+        h1 {
+          text-align: center;
+          font-size: 4rem;
+        }
+      }
+      p {
+        text-align: justify;
+        justify-content: center;
+        margin: 1.25rem;
+        line-height: 1.25rem;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+        padding: 1rem;
+      }
+    }
+  }
+  .clients-section{
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    justify-content: center;
   }
 }

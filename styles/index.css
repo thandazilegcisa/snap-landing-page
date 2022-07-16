@@ -16,6 +16,32 @@
   margin: 2.5rem 0 0 2.5rem;
 }
 
+@media screen and (min-width: 885px) {
+  .logo-navigation-cta-section .navigation-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .logo-navigation-cta-section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+    right: 25%;
+    position: relative;
+    right: 55%;
+  }
+}
+
+@media (min-width: 885px) and (max-width: 1250px) {
+  .logo-navigation-cta-section ul {
+    right: 25%;
+  }
+}
+
 .logo-navigation-cta-section .navigation-section ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,7 +50,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .logo-navigation-cta-section .navigation-section li {
@@ -72,7 +98,7 @@
   text-decoration: none;
   color: dimgray;
   margin: 0 0.5rem 0 0.5rem;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   font-weight: 500;
 }
 
@@ -84,6 +110,10 @@
 .logo-navigation-cta-section .navigation-section a:hover {
   font-weight: 700;
   color: #141414;
+}
+
+.logo-navigation-cta-section .cta-section {
+  position: inherit;
 }
 
 .logo-navigation-cta-section .cta-section ul {
@@ -110,7 +140,7 @@
 .logo-navigation-cta-section .cta-section a {
   text-decoration: none;
   color: dimgray;
-  font-family: 'Epilogue', sans-serif;
+  font-family: "Epilogue", sans-serif;
   font-weight: 500;
 }
 
@@ -124,65 +154,168 @@
   font-weight: 700;
 }
 
-.landing-grid-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
-  -webkit-transform: translateX(6.5rem);
-          transform: translateX(6.5rem);
+.logo-navigation-cta-section button {
+  display: none;
 }
 
-.landing-grid-container .info-section {
-  margin: 5rem 12rem 0 0.5rem;
-  padding: 5%;
+@media screen and (max-width: 885px) {
+  .logo-navigation-cta-section .logo-navigation-cta-section {
+    position: absolute;
+  }
+  .logo-navigation-cta-section .navigation-section {
+    position: absolute;
+    top: 1rem;
+    left: 55%;
+    /* border: 1px solid red; */
+    margin-right: none;
+    width: 45vw;
+    height: 115vh;
+    background-color: white;
+  }
+  .logo-navigation-cta-section .navigation-section ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-preferred-size: content;
+        flex-basis: content;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+  .logo-navigation-cta-section .navigation-section li .company-active-state,
+  .logo-navigation-cta-section .navigation-section li .features-active-state {
+    position: relative !important;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: white;
+  }
+  .logo-navigation-cta-section .logo-section {
+    position: absolute;
+    right: 75%;
+  }
+  .logo-navigation-cta-section button {
+    display: inline-block;
+    border-color: transparent;
+    background: transparent;
+    position: relative;
+    left: 80%;
+  }
+  .logo-navigation-cta-section button i {
+    font-size: 1.55rem;
+    margin: 1rem;
+  }
+  .logo-navigation-cta-section .cta-section {
+    position: relative;
+    top: 0%;
+    left: 32%;
+  }
+  .logo-navigation-cta-section .cta-section .login-link {
+    text-align: justify;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 1.5rem;
+  }
 }
 
-.landing-grid-container .info-section h1 {
-  font-family: sans-serif;
-  font-size: 5rem;
+@media screen and (max-width: 885px) {
+  .main-container .images-section picture img {
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+  }
+  .main-container .info-section {
+    text-align: center;
+  }
+  .main-container .info-section header h1 {
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .main-container .info-section p {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    z-index: -1;
+    left: 30%;
+  }
+  .main-container .info-section .learn-more-button {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-radius: 10%;
+  }
+  .main-container .clients-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2.5rem;
+    margin-top: 4rem;
+  }
 }
 
-.landing-grid-container .info-section h1 span {
-  word-spacing: 5rem;
-}
-
-.landing-grid-container .info-section p {
-  text-align: justify;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  line-height: 2rem;
-  word-spacing: 0.5rem;
-}
-
-.landing-grid-container .info-section a {
-  text-decoration: none;
-  padding: 1rem;
-  border: 1px solid black;
-  color: white;
-  background-color: black;
-  border-radius: 0.55rem;
-}
-
-.landing-grid-container .images-section .hero-section-image {
-  margin-top: 5rem;
-  width: 55%;
-}
-
-.landing-grid-container .client-section {
-  /* Client Section Container */
-}
-
-.landing-grid-container .client-section ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 5rem;
-  -webkit-transform: translateY(-95%);
-          transform: translateY(-95%);
-  margin-left: 2.5rem;
+@media screen and (min-width: 885px) {
+  .main-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .main-container .images-section picture img {
+    margin: 5rem;
+  }
+  .main-container .info-section {
+    margin: 5rem;
+    margin-top: 10rem;
+    text-align: center;
+  }
+  .main-container .info-section header h1 {
+    text-align: center;
+    font-size: 4rem;
+  }
+  .main-container .info-section p {
+    text-align: justify;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1.25rem;
+    line-height: 1.25rem;
+  }
+  .main-container .info-section a {
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 1rem;
+  }
+  .clients-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=index.css.map */

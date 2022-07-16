@@ -7,6 +7,8 @@ let featuresActiveArrow = document.querySelector(".features-active-arrow");
 let companyDefaultArrow = document.querySelector(".company-default-arrow");
 let companyActiveArrow = document.querySelector(".company-active-arrow");
 
+console.log(companyLink.classList.contains("company-link"));
+
 companyLink.addEventListener("mouseover", function (event) {
   getDefaultCompanyState.classList.add("company-active-state");
   companyDefaultArrow.style.display = "none";
@@ -26,7 +28,8 @@ featuresLink.addEventListener("mouseover", function (event) {
 });
 
 featuresLink.addEventListener("mouseout", function (event) {
-  getDefaultFeatureState.classList.remove("features-active-state");
+  /* getDefaultFeatureState.classList.remove("features-active-state"); */
   featuresActiveArrow.style.display = "none";
   featuresDefaultArrow.style.display = "inline-block";
 });
+
